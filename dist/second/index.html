@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonFrame</title>
+  <script>
+    console.log('SonFrame:regist message event');
+    document.cookie = 'index=second; path=/;'
+    window.addEventListener('message', e=> {
+      console.log('SonFrame:message recieved');
+      console.log(e);
+      console.log('SonFrame:', [e.data, e.origin]);
+      document.cookie = 'cross=true; path=/;Same-Site=Lax;'
+    }, false);
+    const setCookie = () => {
+      document.cookie = 'test=setCookie; path=/;Same-Site=Lax;'
+    }
+  </script>
+</head>
+<body>
+  This is SonFrame
+  <button onclick="setCookie()">click to add cookie</button>
+</body>
+</html>

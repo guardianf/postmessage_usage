@@ -1,0 +1,23 @@
+{
+  "name": "postmessage_usage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx http-server dist/index -a 127.0.0.2 -p 8088 & npx http-server dist/second -a 127.0.0.3 -p 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardianf/postmessage_usage.git"
+  },
+  "keywords": [
+    "html5"
+  ],
+  "author": "yubin.fu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guardianf/postmessage_usage/issues"
+  },
+  "homepage": "https://github.com/guardianf/postmessage_usage#readme"
+}
